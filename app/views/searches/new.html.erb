@@ -1,0 +1,27 @@
+<form action="/searches" method="get" data-push="true" data-target=".results">
+  <input type="text" name="query" id="js-query" value='<%=@search.query%>'></input>
+  <button id="js-search">Search</button>
+</form>
+
+<div class="results">
+  <div id="js-warning">
+  </div>
+
+  <h3 id="js-loading">
+  </h3>
+  <table id="js-playlist">
+    <thead>
+      <tr>
+        <th>Score</th>
+        <th>Name</th>
+        <th>Last Performed</th>
+        <th>Performances</th>
+        <th>Popularity</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to 'Create Spotify Playlist', '/auth/spotify', id: "js-create-playlist" %>
